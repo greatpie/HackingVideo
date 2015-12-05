@@ -64,15 +64,15 @@
     </div>
     <img id="user_pic" src="img/user_pic.png">
 
-    <form id="sign_up_form">
+    <div id="sign_up_form">
         <input type="text" id="name" class="input_text" placeholder="Name & Surname">
         <input type="text" id="email" class="input_text" placeholder="Email">
         <input type="password" id="password" class="input_password" placeholder="Password">
         <input type="checkbox" id="check">
 
         <div id="check_text">Check The agreement</div>
-        <input type="submit" id="submit" value="submit">
-    </form>
+        <button id="submit" class="button_white">Submit</button>
+    </div>
 </div>
 <div id="login" class="page">
     <img class="logo" src="img/logo.png">
@@ -148,10 +148,18 @@
     <img id="shoot_sample" src="img/shoot_sample.jpg">
     <img id="shoot_btn" src="img/shoot.png">
 </div>
+<div id="upload" class="page">
+    <div class="user_banner">
+        <img class="back" src="img/user_pic_sample.png">
 
+        <div class="nav_text">Hacking Video</div>
+        <img class="back" src="img/arrow_circle_right.png">
+    </div>
+<video id="upload_video" autoplay=""></video>
+    <img id="upload_sample" src="img/upload_sample.png">
+    <button id="upload_btn" class="button_white">Upload</button>
+</div>
 <!--begin news room-->
-
-
 <!-- beging newsroom 个人中心 -->
 <div id="newsroomSetting" class="page g-newsSetting">
     <div class="header">
@@ -206,12 +214,24 @@
             $("#user_center").css('display', 'none');
             $('#user_start').css('display', 'block');
         });
-        $("#begin").click(function () {
+        $("#user_start").click(function () {
             $("#user_start").css('display', 'none');
             $('#shoot').css('display', 'block');
         });
         $("#shoot").click(function () {
             $("#shoot").css('display', 'none');
+            var video = document.getElementById('upload_video');
+            var errocb = function () {
+                console.log('sth wrong!');
+            }
+            navigator.webkitGetUserMedia({ "video": true }, function (stream) {
+                video.src = window.webkitURL.createObjectURL(stream);
+                video.play();
+            }, errocb);
+            $('#upload').css('display', 'block');
+        });
+        $("#upload_btn").click(function () {
+            $("#upload").css('display', 'none');
             $('#newsroomSetting').css('display', 'block');
         });
         $("#newsroomSetting").click(function () {
@@ -221,6 +241,19 @@
         $("#message").click(function () {
             $("#message").css('display', 'none');
             $('#subscribe').css('display', 'block');
+        });
+        $("#accept").click(function () {
+            $("#agreement").css('display', 'none');
+            $('#user_center').css('display', 'block');
+        });
+        $("#reject").click(function () {
+            $("#reject").css('display', 'none');
+            $('#user_center').css('display', 'block');
+        });
+
+        $("#submit").click(function () {
+            $("#sign_up").css('display', 'none');
+            $('#user_center').css('display', 'block');
         });
     });
 </script>
