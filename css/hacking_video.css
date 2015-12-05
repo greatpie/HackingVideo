@@ -16,7 +16,7 @@ html, body {
     width: 100%;
     height: 100%;
     background-color: #e1ebf3;
-    display: none;
+    display: block;
 }
 
 .logo {
@@ -58,7 +58,7 @@ html, body {
     background-color: #ffffff;
 }
 #shoot{
-    display: block;
+    /*display: block;*/
 }
 .banner {
     width: 100%;
@@ -325,4 +325,140 @@ input[type='checkbox'] {
     width: 10%;
     margin-left: 45%;
     margin-top: 2%;
+}
+/*begin news room*/
+
+/*
+ *  authoer: liu chengchuan;
+ *  time: 15:39;
+*/
+/* newsroom  用户中心 */
+#newsroomSetting{
+    display: none;
+    position: relative;
+}
+.g-newsSetting .header{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 2% 0;
+    text-align: center;
+}
+.g-newsSetting .header i{
+    display: inline-block;
+    background-size: 100%;
+}
+.g-newsSetting .header .back{
+    float: left;
+    width: 8%;
+    padding-bottom: 5%;
+    background: url("../img/back.png") 0 0 no-repeat;
+    background-size: 100%;
+}
+.g-newsSetting .header .setting{
+    float: right;
+    width: 8%;
+    padding-bottom: 8%;
+    margin-left: 10px;
+    background: url("../img/icon_set.png") 0 0 no-repeat;
+    background-size: 100%;
+}
+.g-newsSetting .header p{
+    font-size: 24px;
+}
+.g-newsSetting .newsinfo{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding-bottom: 33%;
+    background: #fff url("../img/newsroom_bg.jpg") 0 40% no-repeat;
+    background-size: cover;
+}
+.g-newsSetting .newsinfo .wrap{
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    margin: 0 10%;
+}
+.g-newsSetting .newsinfo .head_icon{
+    float: left;
+    width: 20%;
+    padding-bottom: 20%;
+    border-radius: 1000px;
+    background: #fff url("../img/icon_dyclub.jpg") 0 0/100% auto no-repeat ;
+}
+.g-newsSetting .newsinfo dl{
+    margin-left: 25%;
+}
+.g-newsSetting .newsinfo dl dt{
+    font-size: 20px;
+    font-weight: bold;
+}
+.g-newsSetting .newsinfo dl dd{
+    position: relative;
+    padding-left: 30px;
+    line-height: 2em;
+}
+.g-newsSetting .newsinfo dl dd i{
+    position: absolute;
+    top: 5px;
+    margin-left: -30px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+}
+.g-newsSetting .newsinfo dl .location{
+    margin-top: 5%;
+}
+.g-newsSetting .newsinfo dl .location i{
+    background: url("../img/icon_map.png") 0 0 no-repeat;
+    background-size: contain;
+}
+.g-newsSetting .newsinfo dl .indentify{
+    font-size: 14px;
+}
+.g-newsSetting .newsinfo dl .indentify i{
+    background: url("../img/icon_check.png") 0 0 no-repeat;
+    background-size: contain;
+}
+.g-status {
+    margin:21% 0 0;
+    width: 100%;
+    padding-bottom: 20%;
+    background: #fff url("../img/status.png") 0 0 no-repeat;
+    background-size: 100% auto;
+}
+.g-item{
+    width: 100%;
+}
+.g-item div{
+    width: 100%;
+    padding-bottom: 39%;
+}
+.g-item .item-1{
+    background: #fff url("../img/newsroom_li_1.jpg") 0 0 no-repeat;
+    background-size: 100%;
+}
+.g-item .item-2{
+    background: #fff url("../img/newsroom_li_2.jpg") 0 0 no-repeat;
+    background-size: 100%;
+}
+.g-item .item-3{
+    background: #fff url("../img/newsroom_li_3.jpg") 0 0 no-repeat;
+    background-size: 100%;
+}
+/*  newsroom 消息页面  */
+#message{
+    display: none;
+    width: 100%;
+    background: #fff url("../img/message.jpg") 0 0 no-repeat;
+    background-size: 100%;
+}
+/*  newsroom发布需求  */
+#subscribe{
+    display: none;
+    width: 100%;
+    background: #fff url("../img/subscribe.jpg") 0 0 no-repeat;
+    background-size: 100%;
 }

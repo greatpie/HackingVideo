@@ -112,6 +112,7 @@
         </div>
     </div>
     <img id="status" src="img/status.png">
+
     <div class="video_items">
         <div id="item1" class="item">
             <img src="img/item1.jpg">
@@ -124,11 +125,13 @@
 <div id="user_start" class="page">
     <div id="start_banner" class="user_banner">
         <img class="back" src="img/user_pic_sample.png">
+
         <div class="nav_text">Hacking Video</div>
-        <img class="back" src="img/arrow_circle_right.png">
+        <img id="begin" class="back" src="img/arrow_circle_right.png">
     </div>
     <input id="search" type="search" name="search" placeholder="Search">
     <img id="location_status" src="img/location_status.png">
+
     <div class="location_items">
         <div id="location_item1" class="location_item">
             <img src="img/location_item1.jpg">
@@ -145,6 +148,41 @@
     <img id="shoot_sample" src="img/shoot_sample.jpg">
     <img id="shoot_btn" src="img/shoot.png">
 </div>
+
+<!--begin news room-->
+
+
+<!-- beging newsroom 个人中心 -->
+<div id="newsroomSetting" class="page g-newsSetting">
+    <div class="header">
+        <i class="back"></i>
+        <i class="setting"></i>
+        <p>Information</p>
+    </div>
+    <div class="newsinfo">
+        <div class="wrap">
+            <div class="head_icon"></div>
+            <dl>
+                <dt>Dyclub Data Media Lab</dt>
+                <dd class="location"><i></i>Wuhan, China</dd>
+                <dd class="indentify"><i></i>Newsroom</dd>
+            </dl>
+        </div>
+    </div>
+    <div class="g-status"></div>
+    <div class="g-item">
+        <div class="item-1"></div>
+        <div class="item-2"></div>
+        <div class="item-3"></div>
+    </div>
+</div>
+<!-- end newsroom 个人中心 -->
+<!-- beging newsroom 消息推送 -->
+<div id="message" class="page"></div>
+<!-- end newsroom 消息推送 -->
+<!-- end newsroom 消息推送 -->
+<div id="subscribe" class="page"></div>
+
 <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
 <script>
     $(document).ready(function () {
@@ -159,6 +197,30 @@
         $("#check_text").click(function () {
             $("#sign_up").css('display', 'none');
             $('#agreement').css('display', 'block');
+        });
+        $("#sign_in_btn").click(function () {
+            $("#login").css('display', 'none');
+            $('#user_center').css('display', 'block');
+        });
+        $("#user_pic_sample").click(function () {
+            $("#user_center").css('display', 'none');
+            $('#user_start').css('display', 'block');
+        });
+        $("#begin").click(function () {
+            $("#user_start").css('display', 'none');
+            $('#shoot').css('display', 'block');
+        });
+        $("#shoot").click(function () {
+            $("#shoot").css('display', 'none');
+            $('#newsroomSetting').css('display', 'block');
+        });
+        $("#newsroomSetting").click(function () {
+            $("#newsroomSetting").css('display', 'none');
+            $('#message').css('display', 'block');
+        });
+        $("#message").click(function () {
+            $("#message").css('display', 'none');
+            $('#subscribe').css('display', 'block');
         });
     });
 </script>
